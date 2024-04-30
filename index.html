@@ -6,15 +6,15 @@
     <title>Student Management System</title>
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body class="bg-[#D9D9D9] w-screen">
-    <nav class="bg-black w-screen h">
-      <p class="text-[#D9D9D9] py-3 font-semibold text-2xl px-3">
+  <body class="bg-[#D9D9D9] scrollbar overflow-x-hidden">
+    <nav class="bg-black w-[100vh-16px]">
+      <p class="text-[#D9D9D9] py-3 font-semibold text-2xl px-2">
         Student Portal
       </p>
     </nav>
-    <div id="search-div" class="w-screen my-4">
-      <form action="#" method="post" id="search-form">
-        <div class="flex flex-row w-screen justify-between items-center px-2">
+    <div id="search-div" class="w-[100vh-16px] my-4">
+      <form action="#" method="post" id="search-form" class="w-[100vh-16px]">
+        <div class="flex flex-row justify-between items-center px-2">
           <div class="w-11/12">
             <input
               type="text"
@@ -28,7 +28,7 @@
             <input
               type="submit"
               name="submit"
-              value="Submit"
+              value="Search"
               id="submit"
               class="py-3 px-5 w-fit bg-black text-white font-semibold cursor-pointer rounded"
             />
@@ -36,7 +36,7 @@
         </div>
       </form>
     </div>
-    <div id="filter-div w-screen">
+    <div id="filter-div w-[100vh-16px]">
       <div class="px-2 flex flex-row flex-wrap justify-between items-center">
         <button
           id="sort-a-z"
@@ -76,64 +76,22 @@
         </button>
       </div>
     </div>
-    <div id="data-table" class="w-screen my-4">
-      <div class="px-2">
-        <div class="overflow-x-auto no-scrollbar">
-          <table
-            class="table-auto w-full border-collapse border border-gray-400"
-          >
-            <thead class="bg-gray-200">
-              <tr>
-                <th class="px-4 py-2 border border-gray-400">ID</th>
-                <th class="px-4 py-2 border border-gray-400">Name</th>
-                <th class="px-4 py-2 border border-gray-400">Gender</th>
-                <th class="px-4 py-2 border border-gray-400">Class</th>
-                <th class="px-4 py-2 border border-gray-400">Marks</th>
-                <th class="px-4 py-2 border border-gray-400">Status</th>
-                <th class="px-4 py-2 border border-gray-400">Email</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr class="bg-[#D9D9D9]">
-                <td
-                  class="px-4 py-2 border border-gray-400 min-w-max text-center"
-                >
-                  1
-                </td>
-                <td
-                  class="px-4 py-2 border border-gray-400 min-w-max text-center"
-                >
-                  John Doe
-                </td>
-                <td
-                  class="px-4 py-2 border border-gray-400 min-w-max text-center"
-                >
-                  Male
-                </td>
-                <td
-                  class="px-4 py-2 border border-gray-400 min-w-max text-center"
-                >
-                  12th Grade
-                </td>
-                <td
-                  class="px-4 py-2 border border-gray-400 min-w-max text-center"
-                >
-                  85%
-                </td>
-                <td
-                  class="px-4 py-2 border border-gray-400 min-w-max text-center"
-                >
-                  Pass
-                </td>
-                <td
-                  class="px-4 py-2 border border-gray-400 min-w-max text-center"
-                >
-                  john@example.com
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
+    <div id="data-table" class="w-[100vh-16px] my-4">
+      <div class="overflow-x-auto px-2 scrollbar">
+        <table class="table-auto w-full border-collapse border border-gray-400">
+          <thead class="bg-gray-200">
+            <tr>
+              <th class="px-2 py-2 border border-gray-400 max-w-max">ID</th>
+              <th class="px-2 py-2 border border-gray-400 max-w-max">Name</th>
+              <th class="px-2 py-2 border border-gray-400 max-w-max">Gender</th>
+              <th class="px-2 py-2 border border-gray-400 max-w-max">Class</th>
+              <th class="px-2 py-2 border border-gray-400 max-w-max">Marks</th>
+              <th class="px-2 py-2 border border-gray-400 max-w-max">Status</th>
+              <th class="px-2 py-2 border border-gray-400 max-w-max">Email</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
       </div>
     </div>
     <script src="script.js"></script>
