@@ -11,7 +11,7 @@ let searchSubmit = document.querySelector("#submit");
 let searchDiv = document.querySelector("#search-div");
 
 let notFound = document.createElement("div");
-notFound.innerHTML = `<p class="text-red-500 font-semibold text-xl"> Data Not Found !!!</p>`;
+notFound.innerHTML = `<p class="text-red-500 text-center font-semibold text-xl px-2 py-3"> Data Not Found !!!</p>`;
 notFound.style.display = "none";
 searchDiv.appendChild(notFound);
 
@@ -148,7 +148,11 @@ function formSearch(e) {
         (student.passing ? "pass" : "fail").includes(searchData)
       );
     });
-    loadData(data);
+    if (data.length !== 0) {
+      loadData(data);
+    } else {
+      notFound.style.display = "block";
+    }
   } else {
     notFound.style.display = "block";
   }
