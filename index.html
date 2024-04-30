@@ -4,12 +4,138 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Student Management System</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
-  <body>
-    <nav>
-      <p>Student Portal</p>
+  <body class="bg-[#D9D9D9] w-screen">
+    <nav class="bg-black w-screen h">
+      <p class="text-[#D9D9D9] py-3 font-semibold text-2xl px-3">
+        Student Portal
+      </p>
     </nav>
-
+    <div id="search-div" class="w-screen my-4">
+      <form action="#" method="post" id="search-form">
+        <div class="flex flex-row w-screen justify-between items-center px-2">
+          <div class="w-11/12">
+            <input
+              type="text"
+              name="search"
+              id="search"
+              placeholder="Search"
+              class="py-3 px-5 w-full rounded outline-none border-[1px] border-black bg-[#D9D9D9]"
+            />
+          </div>
+          <div class="ml-2">
+            <input
+              type="submit"
+              name="submit"
+              value="Submit"
+              id="submit"
+              class="py-3 px-5 w-fit bg-black text-white font-semibold cursor-pointer rounded"
+            />
+          </div>
+        </div>
+      </form>
+    </div>
+    <div id="filter-div w-screen">
+      <div class="px-2 flex flex-row flex-wrap justify-between items-center">
+        <button
+          id="sort-a-z"
+          class="w-36 text-nowrap px-4 py-2 bg-black text-white rounded my-3"
+        >
+          Sort A &rArr; Z
+        </button>
+        <button
+          id="sort-z-a"
+          class="w-36 text-nowrap px-4 py-2 bg-black text-white rounded my-3"
+        >
+          Sort Z &rArr; A
+        </button>
+        <button
+          id="sort-mark"
+          class="w-36 text-nowrap px-4 py-2 bg-black text-white rounded my-3"
+        >
+          Sort By Marks
+        </button>
+        <button
+          id="sort-pass"
+          class="w-36 text-nowrap px-4 py-2 bg-black text-white rounded my-3"
+        >
+          Sort By Passing
+        </button>
+        <button
+          id="sort-class"
+          class="w-36 text-nowrap px-4 py-2 bg-black text-white rounded my-3"
+        >
+          Sort By Class
+        </button>
+        <button
+          id="sort-gender"
+          class="w-36 text-nowrap px-4 py-2 bg-black text-white rounded my-3"
+        >
+          Sort By Gender
+        </button>
+      </div>
+    </div>
+    <div id="data-table" class="w-screen my-4">
+      <div class="px-2">
+        <div class="overflow-x-auto no-scrollbar">
+          <table
+            class="table-auto w-full border-collapse border border-gray-400"
+          >
+            <thead class="bg-gray-200">
+              <tr>
+                <th class="px-4 py-2 border border-gray-400">ID</th>
+                <th class="px-4 py-2 border border-gray-400">Name</th>
+                <th class="px-4 py-2 border border-gray-400">Gender</th>
+                <th class="px-4 py-2 border border-gray-400">Class</th>
+                <th class="px-4 py-2 border border-gray-400">Marks</th>
+                <th class="px-4 py-2 border border-gray-400">Status</th>
+                <th class="px-4 py-2 border border-gray-400">Email</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="bg-[#D9D9D9]">
+                <td
+                  class="px-4 py-2 border border-gray-400 min-w-max text-center"
+                >
+                  1
+                </td>
+                <td
+                  class="px-4 py-2 border border-gray-400 min-w-max text-center"
+                >
+                  John Doe
+                </td>
+                <td
+                  class="px-4 py-2 border border-gray-400 min-w-max text-center"
+                >
+                  Male
+                </td>
+                <td
+                  class="px-4 py-2 border border-gray-400 min-w-max text-center"
+                >
+                  12th Grade
+                </td>
+                <td
+                  class="px-4 py-2 border border-gray-400 min-w-max text-center"
+                >
+                  85%
+                </td>
+                <td
+                  class="px-4 py-2 border border-gray-400 min-w-max text-center"
+                >
+                  Pass
+                </td>
+                <td
+                  class="px-4 py-2 border border-gray-400 min-w-max text-center"
+                >
+                  john@example.com
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
     <script src="script.js"></script>
   </body>
 </html>
